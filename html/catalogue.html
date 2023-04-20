@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style1.css" />
+    <title>CATALOGUE</title>
+  </head>
+
+  <body onload="afficherRec()">
+    <div class="container">
+      <nav>
+        <div class="coter">
+          <div class="log">
+            <img src="restaurant_menu_black_24dp 1.png" alt="" />
+          </div>
+          <h3>Recettes Gourmandes</h3>
+        </div>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">RECIPES</a></li>
+          <li><a href="#">FOOD LOVERS</a></li>
+          <li><a href="#">ABOUT US </a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <h1>Here our categorie</h1>
+      <p>
+        "Notre site propose diverses catégories de recettes pour tous les goûts
+        : cuisine du monde pour des saveurs exotiques, cuisine végétarienne ou
+        végétalienne sans viande, délicieux desserts pour les gourmands,
+        recettes rapides et faciles pour les repas en semaine, cuisine santé
+        pour des options nutritives, recettes de saison avec des produits frais,
+        et même des recettes pour enfants pour rendre la cuisine amusante en
+        famille. Quel que soit votre style culinaire ou vos préférences
+        alimentaires, nous avons une catégorie qui correspond à vos besoins et
+        envies !"
+      </p>
+      <label for="search">tap your recepies</label>
+      <input type="text" id="search" /><br />
+      <button
+        onclick="rechercheRec(event,document.getElementById('search').value)"
+      >
+        rechrcher
+      </button>
+      <label for="cat-selc">filtre psr categorie</label>
+      <select id="cat-selc" onchange="rechercheCtg()">
+        <option value="">Tout les categories</option>
+        <option value="Entrée">entree</option>
+        <option value="Plat principal">Plat principal</option>
+        <option value="Dîner">Dîner</option>
+        <option value="Déjeuner">Déjeuner</option>
+        <option value="Petit déjeuner">Petit déjeuner</option>
+        <option value="Plat">Plat</option></select
+      ><br />
+      <div id="recc"></div>
+    </div>
+  </body>
+  <script src="../js/recettesDB.js"></script>
+  <script src="../js/catalouge.js"></script>
+</html>
